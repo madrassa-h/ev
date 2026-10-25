@@ -1,2 +1,0 @@
-Sponsoren-Logos hier ablegen: sponsor-1.png bis sponsor-6.png (PNG oder SVG mit .png-Namen nur für PNG; querformatig, möglichst transparenter Hintergrund).
-Anzeige im Footer unten auf jeder Seite.
