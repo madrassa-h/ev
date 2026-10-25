@@ -1,0 +1,190 @@
+/* Madrassa Hannover – frisches, lebendiges Design (Farbdesign wiederhergestellt) */
+:root{--coral:#23897d;--leaf:#a8d27a;--sea:#3d8aa8;--sky:#8ccbe0;--sun:#f3cf6b;--ink:#1e3a4c;--cream:#fbf8f2;--paper:#fbf8f2;--sand:#f6efe0;--soft:#f6efe0;--line:#e9e1d0;--accent:#4a9bb8;--text-soft:#52606a}
+@keyframes float{50%{translate:0 -18px;rotate:6deg}}
+@keyframes bob{50%{translate:0 -6px}}
+@keyframes up{from{opacity:0;translate:0 26px}}
+@keyframes mark{from{background-size:0 100%}to{background-size:100% 100%}}
+body{background:radial-gradient(520px 520px at 6% 10%,rgba(140,203,224,.16),transparent 70%),radial-gradient(480px 480px at 96% 28%,rgba(243,207,107,.14),transparent 70%),radial-gradient(520px 520px at 8% 78%,rgba(168,210,122,.12),transparent 70%),var(--cream);background-attachment:fixed}
+section[style*="background:#fff"]{background:#fff radial-gradient(rgba(61,138,168,.07) 2.5px,transparent 2.5px) 0 0/30px 30px!important}
+
+/* Kopfzeile – gesteuert über style.css (floating pill → sticky bar) */
+.nav{box-sizing:border-box}
+/* Anmeldung & Links – Styling in style.css */
+
+
+/* Section-Labels ausgeblendet */
+.section-label,
+.page-hero .section-label{
+  display:none!important;
+}
+
+/* Buttons */
+.btn{font-weight:800;border-radius:99px;transition:transform .2s var(--pop),box-shadow .2s,background .2s}
+/* Buttons: einheitlich dunkelblau – gesteuert in style.css */
+.btn-primary,.btn-gold,.btn-arabisch,.cta-band .btn-gold,.wa-btn{box-shadow:none!important}
+.btn-secondary{box-shadow:none!important}
+
+/* Überschriften & Labels */
+.section-label,.page-hero .section-label{display:none!important}
+.section-head h2,.section-title{position:relative;display:inline-block}
+.section-head h2::after,.section-title::after{content:"";display:block;height:9px;width:62%;margin-top:6px;border-radius:99px;background:linear-gradient(90deg,var(--sun),var(--leaf))}
+.section-head.center h2::after,.cta-band .section-title::after{margin-inline:auto}
+/* Gelber Strich unter „Chancen“: volle Wortbreite, berührt die Buchstaben, etwas dicker */
+h1 .mark{
+  position:relative;
+  display:inline;
+  background:none !important;
+  padding:0;
+  border-radius:0;
+}
+h1 .mark::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0.02em;
+  height:0.3em;
+  background:var(--sun);
+  border-radius:2px;
+  z-index:-1;
+  transform-origin:left center;
+  animation:markUnderline 0.9s 0.35s both;
+}
+@keyframes markUnderline{
+  from{transform:scaleX(0)}
+  to{transform:scaleX(1)}
+}
+
+/* Hero Startseite */
+.hero:not(.hero-with-slider){background:linear-gradient(150deg,#e6f3f8 0%,#fbf4e2 55%,#e8f4ee 100%);border-radius:0 0 28px 28px;overflow:hidden;position:relative}
+.hero-with-slider{background:transparent;border-radius:0;overflow:hidden;position:relative}
+.hero>.container{position:relative;z-index:1}
+.hero::before,.hero::after{display:none!important;content:none!important}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+
+/* Unterseiten-Header – Footer-Blau mit leichtem Verlauf + Original-Kacheln */
+.page-hero{
+  background:linear-gradient(145deg, #1e3a4c 0%, #2a5168 50%, #355f78 100%)!important;
+  border-radius:0 0 28px 28px;
+  overflow:hidden;
+  position:relative;
+  color:#fff;
+  max-width:100%;
+}
+.page-hero>.container{
+  position:relative;
+  z-index:2;
+  max-width:1120px;
+}
+.page-hero h1{
+  color:#fff!important;
+  font-size:clamp(2rem,4.4vw,3rem);
+  letter-spacing:-.02em;
+}
+.page-hero p,
+.page-hero .section-lead{
+  color:rgba(255,255,255,.82)!important;
+}
+.page-hero .section-label{
+  background:var(--sun)!important;
+  color:var(--ink)!important;
+  border:none!important;
+  rotate:-2deg;
+}
+.page-hero .mark{
+  background:linear-gradient(transparent 72%,rgba(243,207,107,.55) 72% 88%,transparent 88%) 0 0/100% 100% no-repeat;
+  color:#fff;
+}
+/* Drei Vierecke – Original-Farben: Grün, Rot, Blau */
+.page-hero::after{
+  content:""!important;
+  display:block!important;
+  position:absolute;
+  right:max(24px, calc((100% - 1120px) / 2 + 40px));
+  bottom:36px;
+  width:100px;
+  height:64px;
+  z-index:1;
+  pointer-events:none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 90'%3E%3Cg transform='translate%2870 86%29'%3E%3Cg transform='rotate%28-50%29'%3E%3Cpath d='M0 0C17 -16 17 -56 0 -66C-17 -56 -17 -16 0 0Z' fill='%23a8d27a'/%3E%3C/g%3E%3Cg transform='rotate%2850%29'%3E%3Cpath d='M0 0C17 -16 17 -56 0 -66C-17 -56 -17 -16 0 0Z' fill='%238ccbe0'/%3E%3C/g%3E%3Cg transform='rotate%280%29'%3E%3Cpath d='M0 0C20 -20 20 -68 0 -78C-20 -68 -20 -20 0 0Z' fill='%23e05c5c'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") center bottom / contain no-repeat;
+  
+  opacity:.95;
+}
+.page-hero::before{display:none!important}
+
+/* Vierecke auf schmalen Screens */
+@media(max-width:900px){
+  .page-hero::after{
+    right:24px;
+    bottom:28px;
+    width:80px;
+    height:51px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 90'%3E%3Cg transform='translate%2870 86%29'%3E%3Cg transform='rotate%28-50%29'%3E%3Cpath d='M0 0C17 -16 17 -56 0 -66C-17 -56 -17 -16 0 0Z' fill='%23a8d27a'/%3E%3C/g%3E%3Cg transform='rotate%2850%29'%3E%3Cpath d='M0 0C17 -16 17 -56 0 -66C-17 -56 -17 -16 0 0Z' fill='%238ccbe0'/%3E%3C/g%3E%3Cg transform='rotate%280%29'%3E%3Cpath d='M0 0C20 -20 20 -68 0 -78C-20 -68 -20 -20 0 0Z' fill='%23e05c5c'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") center bottom / contain no-repeat;
+  }
+}
+@media(max-width:560px){
+  .page-hero::after{
+    right:14px;
+    bottom:18px;
+    width:60px;
+    height:39px;
+    opacity:.8;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 90'%3E%3Cg transform='translate%2870 86%29'%3E%3Cg transform='rotate%28-50%29'%3E%3Cpath d='M0 0C17 -16 17 -56 0 -66C-17 -56 -17 -16 0 0Z' fill='%23a8d27a'/%3E%3C/g%3E%3Cg transform='rotate%2850%29'%3E%3Cpath d='M0 0C17 -16 17 -56 0 -66C-17 -56 -17 -16 0 0Z' fill='%238ccbe0'/%3E%3C/g%3E%3Cg transform='rotate%280%29'%3E%3Cpath d='M0 0C20 -20 20 -68 0 -78C-20 -68 -20 -20 0 0Z' fill='%23e05c5c'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") center bottom / contain no-repeat;
+  }
+}
+
+/* Statistik */
+.stat{border-color:transparent;box-shadow:0 8px 0 rgba(23,58,82,.08);transition:transform .3s var(--pop)}
+.stat .num{font-size:2.9rem}
+.stat:nth-child(1){background:#e6f2f7}.stat:nth-child(1) .num{color:#3d8aa8}
+.stat:nth-child(2){background:#faf0d6}.stat:nth-child(2) .num{color:#b8892a}
+.stat:nth-child(3){background:#eaf4de}.stat:nth-child(3) .num{color:#6a9a3a}
+.stat:nth-child(4){background:#efe9f7}.stat:nth-child(4) .num{color:#7a63a8}
+.stat .label{color:var(--ink);font-weight:700}
+.stat:hover{transform:translateY(-6px) rotate(-1.5deg)}
+
+/* Karten */
+.focus-card:hover,.lang-card:hover,.subject-tile:hover{transform:translateY(-4px)}
+.card:hover{transform:translateY(-4px)}
+
+/* Projekte */
+.proj article:hover{transform:translateY(-6px)}
+.proj article:hover .ph{transform:scale(1.02)}
+
+/* CTA falls vorhanden */
+.cta-band{background:linear-gradient(135deg,#f7e3a1 0%,#d7ecd8 100%)!important;border-radius:28px 28px 0 0}
+.cta-band p{color:var(--ink)!important}
+.cta-band .grad-text{background:none;-webkit-text-fill-color:#176459;color:#176459;text-shadow:none}
+.cta-band .btn,.cta-band .btn-gold{background:var(--ink);color:#fff;box-shadow:0 5px 0 #0c2231}
+
+/* Fotos & Karten – moderne, weiche Rundungen */
+.ph,.proj .ph,.news-thumb{
+  border-radius:12px!important;
+}
+.focus-img{border-radius:0!important}
+.bx{border-radius:22px!important}
+.focus-card,.lang-card,.card,.subject-tile,.news-item,.stat{
+  border-radius:22px!important;
+}
+.mosaic>*{border-radius:16px!important}
+
+/* Slider – full-bleed, controlled in style.css */
+.hero-slider.photo-slider{
+  border-radius:0!important;
+  box-shadow:none!important;
+  max-width:none!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  aspect-ratio:auto!important;
+}
+
+/* FAB */
+.fab:hover{transform:scale(1.08)}
+
+@media(max-width:700px){
+  .hero:not(.hero-with-slider),.page-hero{border-radius:0 0 20px 20px}
+  .hero-with-slider{border-radius:0}
+  .cta-band{border-radius:20px 20px 0 0}
+}
+
+

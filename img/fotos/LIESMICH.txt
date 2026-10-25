@@ -1,0 +1,17 @@
+Hier die Fotos ablegen. Der Dateiname entscheidet, wo das Foto erscheint (ohne HTML zu ändern).
+Empfohlen: JPG, mindestens 1200 px breit, unter 400 KB.
+
+projekt-ausfluege.jpg  ->  Ausflüge und Kulturbesuche
+projekt-kueche.jpg  ->  Internationale Küchen
+projekt-sport.jpg  ->  Sportturniere
+projekt-schulstart.jpg  ->  Schulstart-Hilfe
+hero-unterricht.jpg  ->  Unterricht
+hero-gruppe.jpg  ->  Gruppe
+hero-ausflug.jpg  ->  Ausflug oder Sport
+sprachen.jpg  ->  Sprachunterricht
+nachhilfe.jpg  ->  Nachhilfe
+integration.jpg  ->  Integration und Kultur
+sport.jpg  ->  Sport
+hilfe.jpg  ->  Hilfe für Kinder
+team.jpg  ->  Team oder Standort
+aktivitaet.jpg  ->  Unterricht oder Aktivität
